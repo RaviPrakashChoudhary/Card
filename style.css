@@ -9,9 +9,12 @@ body {
     background-color: rgb(248, 179, 29);
 
 }
-.main{
+
+.main {
     box-sizing: content-box;
-    width: 50em;
+    width: 40em;
+    height: 50em;
+
     padding: 2.5em 3em;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -20,38 +23,41 @@ body {
     border-radius: .6em;
     box-shadow: 0 0.9em 2.8em rgb(243, 5, 5);
     background: linear-gradient(30deg, rgb(255, 196, 0), rgb(71, 232, 253));
-
-    /* background-color: rgb(252, 207, 7); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.movesTime{
+
+.movesTime {
     width: 90%;
     text-align: right;
-    margin-bottom: 1.5em;;
+    margin-bottom: 1.5em;
+    ;
 }
-.cardContainer{
+
+.cardContainer {
     position: relative;
     width: 100%;
     display: grid;
-    gap: 0.6em;
+    gap: 1em;
 }
-.cards{
-    position: relative;
-    width: 10em;
-    height: 12em;
-    cursor: pointer; 
-    /* box-shadow: 0 1em 2.8em rgb(243, 5, 5); */
 
+.cards {
+    position: relative;
+    width: 8em;
+    height: 10em;
+    cursor: pointer;
 }
-.image{
+
+.image {
     width: 10em;
     height: 12em;
     background-size: cover;
 }
-.front, .back{
+
+.front,
+.back {
     position: absolute;
     border-radius: 5px;
     width: 100%;
@@ -63,23 +69,26 @@ body {
     transition: transform 0.7s ease-out;
     backface-visibility: hidden;
 }
-.front{
-    /* background-color: rgb(236, 114, 15); */
+
+.front {
     background-image: url(./gameLogo.jpg);
     background-size: cover;
     font-weight: 600;
 }
-.back{
-    /* background-color: aqua; */
+
+.back {
     transform: rotateY(180deg);
 }
-.cards.flipped .front{
+
+.cards.flipped .front {
     transform: rotateY(180deg);
 }
-.cards.flipped .back{
+
+.cards.flipped .back {
     transform: rotateY(0deg);
 }
-.startResult{
+
+.startResult {
     position: absolute;
     display: flex;
     align-items: center;
@@ -90,34 +99,39 @@ body {
     background: linear-gradient(30deg, rgb(255, 196, 0), rgb(253, 71, 71));
 
 }
-button{
-    padding: 1.5rem 2rem;
+
+button {
+    padding: 0.5rem 1rem;
     border: none;
-    background-color:  rgb(206, 22, 22);
+    background-color: rgb(206, 22, 22);
     border-radius: 15rem;
     color: rgb(10, 10, 10);
     font-size: 2em;
-    margin-top: 2em;
+    margin-top: 1em;
 }
-.startResult button{
+
+.startResult button {
     background-image: url(./button.jpg);
     background-size: cover;
     padding: 3rem 10rem;
     border: none;
     border-radius: 15rem;
     color: rgb(245, 236, 236)
-
 }
-.hide{
+
+.hide {
     display: none;
 }
-#result{
+
+#result {
     text-align: center;
 }
-#result h1{
+
+#result h1 {
     font-size: 2.5em;
 }
-#result h4{
+
+#result h4 {
     font-size: 1.8em;
     margin: 0.6em 0 1em 0;
 }
