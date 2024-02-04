@@ -51,9 +51,9 @@ body {
 }
 
 .image {
-    width: 10em;
-    height: 12em;
     background-size: cover;
+    width: 7.6em;
+    height: 9.6em;
 }
 
 .front,
