@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(248, 179, 29);
+
+}
+.main{
+    box-sizing: content-box;
+    width: 50em;
+    padding: 2.5em 3em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: .6em;
+    box-shadow: 0 0.9em 2.8em rgb(243, 5, 5);
+    background: linear-gradient(30deg, rgb(255, 196, 0), rgb(71, 232, 253));
+
+    /* background-color: rgb(252, 207, 7); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.movesTime{
+    width: 90%;
+    text-align: right;
+    margin-bottom: 1.5em;;
+}
+.cardContainer{
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+}
+.cards{
+    position: relative;
+    width: 10em;
+    height: 12em;
+    cursor: pointer; 
+    /* box-shadow: 0 1em 2.8em rgb(243, 5, 5); */
+
+}
+.image{
+    width: 10em;
+    height: 12em;
+    background-size: cover;
+}
+.front, .back{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+.front{
+    /* background-color: rgb(236, 114, 15); */
+    background-image: url(./gameLogo.jpg);
+    background-size: cover;
+    font-weight: 600;
+}
+.back{
+    /* background-color: aqua; */
+    transform: rotateY(180deg);
+}
+.cards.flipped .front{
+    transform: rotateY(180deg);
+}
+.cards.flipped .back{
+    transform: rotateY(0deg);
+}
+.startResult{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(30deg, rgb(255, 196, 0), rgb(253, 71, 71));
+
+}
+button{
+    padding: 1.5rem 2rem;
+    border: none;
+    background-color:  rgb(206, 22, 22);
+    border-radius: 15rem;
+    color: rgb(10, 10, 10);
+    font-size: 2em;
+    margin-top: 2em;
+}
+.startResult button{
+    background-image: url(./button.jpg);
+    background-size: cover;
+    padding: 3rem 10rem;
+    border: none;
+    border-radius: 15rem;
+    color: rgb(245, 236, 236)
+
+}
+.hide{
+    display: none;
+}
+#result{
+    text-align: center;
+}
+#result h1{
+    font-size: 2.5em;
+}
+#result h4{
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+}
